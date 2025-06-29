@@ -58,9 +58,17 @@ module traffic_light_tb;
     rst=0;
     #300
     $finish;
-    
   end
 endmodule
   
-  
+   //OUTPUT
+
+Traffic_light states: red=1 green=0 yellow=0
+Traffic_light states: red=0 green=1 yellow=0
+Traffic_light states: red=0 green=0 yellow=1 
+Traffic_light states: red=1 green=0 yellow=0 
+Traffic_light states: red=0 green=1 yellow=0
+Traffic_light states: red=0 green=0 yellow=1
+Traffic_light states: red=1 green=0 yellow=0
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (18): $finish called.
 
