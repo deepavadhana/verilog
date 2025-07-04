@@ -79,7 +79,7 @@ assign char_index = (rx_data_reg >= "A" && rx_data_reg <= "Z") ?
                     rx_data_reg - "A" :
                     5'd31;  
 
-seg7_alphabet_decoder seg_inst (
+seven_segment seg_inst (
   .bin(char_index),
   .seg(seg)
 );
