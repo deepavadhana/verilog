@@ -59,7 +59,7 @@
 
       START: begin
         if (tick) begin
-          if (tick_reg == 8) begin  // Sample at midpoint of start bit
+          if (tick_reg == 8) begin  
             tick_next  = 0;
             next_state = DATA;
             bits_next  = 0;
@@ -73,7 +73,7 @@
         if (tick) begin
           if (tick_reg == 15) begin
             tick_next  = 0;
-            data_next  = {rx_stable, data_reg[7:1]}; // LSB first
+            data_next  = {rx_stable, data_reg[7:1]}; 
             if (bits == (DBITS - 1)) begin
               next_state = STOP;
             end else begin
