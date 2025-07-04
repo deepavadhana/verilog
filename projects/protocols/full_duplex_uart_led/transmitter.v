@@ -69,7 +69,7 @@ module transmitter #(parameter DBITS = 8, SBITS = 16)(
       DATA: begin
         tx_next = data_reg[0];
         if (tick) begin
-          if (tick_reg == 8) begin 
+          if (tick_reg == 15) begin 
             tick_next = 0;
             data_next = data_reg >> 1;
             if (bits == (DBITS - 1)) begin
