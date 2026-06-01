@@ -2,7 +2,7 @@
 module task_void_delay;
   task msg();
     #10;
-    $display("Hello");
+    $display("Hello at time %0t",$time");
   endtask
   initial begin
     msg();
