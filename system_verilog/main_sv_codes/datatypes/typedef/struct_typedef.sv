@@ -12,6 +12,6 @@ module struct_typedef;
     $display("Details name=%0s",details.data);
     $display("Details id=%0d",details.id);
     $display("Details age=%0d",details.age);
-    $display("size of datatypes used",$bits(details));
+    $display("size of datatypes used:%0d",$bits(details));
   end
 endmodule
