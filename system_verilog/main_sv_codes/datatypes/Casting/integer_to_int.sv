@@ -5,7 +5,7 @@ module casting_datatype;
   initial begin
     data=8'b0x1011z0;
     $display("before casting : %0b",data);
-    $display("size After casting : %0d",$size(data));
+    $display("size before casting : %0d",$size(data));
     bdata=int'(data);
     $display("After casting : %0b",bdata);
 
