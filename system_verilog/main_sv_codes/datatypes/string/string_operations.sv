@@ -7,9 +7,9 @@ module string_operations;
     else
       $display("Both string are unequal");
     if(str1!==str2)
-      $display("Both string are equal");
-    else
       $display("Both string are unequal");
+    else
+      $display("Both string are equal");
     if(str1>str2)
       $display("String1 is greater");
     if(str1<str2)
@@ -22,4 +22,7 @@ module string_operations;
     $display("Replication of str1 :%0s",{2{str1}});
   end
 endmodule
+    
+    
+    
     
