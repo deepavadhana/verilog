@@ -25,5 +25,31 @@ module struct_in_function;
       end
       endmodule
         
-        
+        emp datatype
+     │
+     ▼
+student("Deepa",11,142)
+     │
+     ▼
+temporary emp e
+     │
+     ▼
+e.name = "Deepa"
+e.id   = 11
+e.data = 142
+     │
+     ▼
+return e
+     │
+     ▼
+ea gets a copy
+     │
+     ▼
+print(ea)
+     │
+     ▼
+ea copied into print's parameter e
+     │
+     ▼
+display e
   
