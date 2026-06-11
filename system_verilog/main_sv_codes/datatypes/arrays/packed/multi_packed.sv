@@ -4,7 +4,7 @@ module multi_packed;
   bit[3:0][2:0]arr;
   initial begin
     arr=12'h342f;
- $display("Array elements=%p",arr);
+    $display("Array elements=%p",arr);//%p will print in decimal value
       foreach(arr[i])begin
       foreach(arr[i,j])begin
       
