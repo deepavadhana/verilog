@@ -1,5 +1,9 @@
-//without using super we can assign the parent obj and access but mostly in long code , super is efficient
-//here we can use same name for function in both parent and child this doesnt lead to any overriding as we created seperate object for both parent and child
+//without arguments in the constructor
+//Usually, we create an object for both base and child class and then do a method call and assign values to their class properties.
+//To prove that SystemVerilog does super.new() function calls internally. 
+//An object is only created for the child class and then the child class handle is assigned to its base class. 
+//This is required to refer to the memory location for a base class that is created on super.new() call. 
+//Later base class data variable value is assigned. On calling display() method for the corresponding class handle, to print respective class properties.
 class parent;
   string name;
   int id;
@@ -8,6 +12,7 @@ class parent;
   endfunction
 endclass
 class child extends parent;
+  string name;
   function void display();
     $display("child class : name:%0s,id=%0d",name,id);
   endfunction
@@ -20,10 +25,11 @@ module inheritance_overridng;
     c=new();
     c.name="deepa";
     c.id=16;
-    c.display();
+    p=c;
     p.name="deepavadhana";
     p.id=36;
     p.display();
+    c.display();
     end
 endmodule
     
