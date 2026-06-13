@@ -1,3 +1,4 @@
+//here we have same function name in both the parent and child class this creates overriding of parent by child while using one object 
 class parent;
   string name;
   int id;
