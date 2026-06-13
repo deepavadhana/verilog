@@ -1,4 +1,4 @@
-
+//with arguments in constructor
 class parent;
   string name;
   int id;
