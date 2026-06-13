@@ -16,12 +16,8 @@ module mobile_details;
   initial begin
     m1=new();
     m2=new();
-    m1.name="samsung";
-    m1.power=3'd4;
-    m1.battery=10;
-    m2.name="vivo";
-    m2.power=4'd9;
-    m2.battery=20;
+    m1.values(10,"samsung",4'd4);
+    m2.values(20,"vivo",4'd9);
     m1.display();
     m2.display();
     end
