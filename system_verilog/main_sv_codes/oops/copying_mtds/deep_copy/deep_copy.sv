@@ -12,23 +12,27 @@ class transaction;
   bit [3:0] trans;
   error err;
   function new();
-    trans=4'b1001;
-    err=new(4'b0011,64);
+    trans=4'b1010;
+    err=new(4'b1111,43);
   endfunction
   function void display();
-$display("trans=%0d,error:err_data=%0d,err_id=%0d",trans,err.err_data,err.err_id);
+    $display("trans:%0b,error:err_data=%0d,err_id=%0d",trans,err.err_data,err.err_id);
+  endfunction
+  function deep_copy(transaction copy);
+    this.trans=copy.trans;
+    this.err.err_data=copy.err.err_data;
+    this.err.err_id=copy.err.err_id;
   endfunction
 endclass
-module err_trans;
-  transaction tr1,tr2;
-  initial begin
+  module deep_copy_mtd;
+    transaction tr1,tr2;
+    initial begin
     tr1=new();
     $display("Displaying tr1 and tr2 -tr2 is copy of tr1");
     $display("displaying tr1");
     tr1.display();
-    $display("In deep copy the creation of obj of tr2 needs to be done as we are assigning the copy of tr1 to it- in other mtds its not followed");
     tr2=new();
-    tr2=new tr1;
+    tr2.deep_copy(tr1);
     $display("displaying tr2");
     tr2.display();
     $display("changing only properties of tr1 and tr2");
@@ -55,4 +59,3 @@ module err_trans;
     tr1.display();
     end
     endmodule
-    
