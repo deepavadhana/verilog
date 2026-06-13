@@ -1,4 +1,4 @@
-//here as i assigned string and id to the childA class the values will not get update to the parent class and childA as the childA extends parent class 
+//here as i assigned string and id to the childA class the values will not get update to the parent class  as the childA extends parent class 
 //and the childB gets updated because childA contains the string and id so it consider it as its parent class so it display the o/p,
 //so the better way is dont assign same properties to the extending child classes
 class parent_class;
