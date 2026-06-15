@@ -1,4 +1,5 @@
-class parent;
+//if we use virtual then the arguments list should be same for both the parent and child
+  class parent;
   int id;
   string name;
   virtual function void display(int id,string name);
