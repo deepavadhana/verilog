@@ -9,6 +9,6 @@ module dynamic_arr_unbound;
     end
   $display("Size of Array elements:%0d",arr.size());
     $display("Array element at index:%0d",arr[3]);
-    $display("Array element at index:%0d",arr[100]);//unbounded index
+    $display("Array element at index:%0d",arr[100]);//unbounded index so warning msg will be given
   end
 endmodule
