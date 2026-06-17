@@ -25,7 +25,7 @@ endclass
       p=new();
       c=new();
      
-     // c.d=8;here we cant access the protected variable of the parent with help of the child object 
+     // c.d=8;here we cant access the protected variable of the parent with help of the any object because its outside of class
       
       
       e=p.display(4,5);
