@@ -20,6 +20,6 @@ module scoped_resolution;
   end
 endmodule
 
-ERROR:
-"Cannot access non-static class member 'transaction::data' using scope operator '::'." "testbench.sv" 17  21
-"Cannot access non-static class member 'auto_disp' using scope operator '::'." "testbench.sv" 18  28
+//ERROR:
+//"Cannot access non-static class member 'transaction::data' using scope operator '::'." "testbench.sv" 17  21
+//"Cannot access non-static class member 'auto_disp' using scope operator '::'." "testbench.sv" 18  28
