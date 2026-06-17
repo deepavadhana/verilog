@@ -1,4 +1,5 @@
-
+//here scope resolution is used only to access the static functions/members not the non static functions/members
+//because the static are belong to the class itself so it doesnt need any object to access it directly :: can be used to access it  
 class transaction;
   static int id;
   byte data;
@@ -16,7 +17,7 @@ module scoped_resolution;
     tr=new();
     transaction::id=16;
     transaction::disp(transaction::id);
-    tr.data=8'b10101011;
+    tr.data=8'b10101011;//here the object is used to get the accessing of non static member and function 
     tr.auto_disp();
    end
 endmodule
