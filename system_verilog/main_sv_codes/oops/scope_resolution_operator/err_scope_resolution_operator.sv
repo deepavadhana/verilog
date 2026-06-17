@@ -1,4 +1,5 @@
-
+//here scope resolution is used only to access the static functions/members not the non static functions/members
+//because the static are belong to the class itself so it doesnt need any object to access it directly :: can be used to access it  
 class transaction;
   static int id;
   byte data;
