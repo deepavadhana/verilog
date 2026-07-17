@@ -30,7 +30,7 @@ endclass
           foreach(md.assc[i])
             $display("Randomisation success: assc[%s]=%0d ",i.name(),md.assc[i]);
           foreach(md.dyn[i])
-            $display("Randomisation success: assc[%s]=%0d ",i,md.dyn[i]);
+            $display("Randomisation success: assc[%0d]=%0d ",i,md.dyn[i]);
         end
         else 
           $display("Randomisation failed");
