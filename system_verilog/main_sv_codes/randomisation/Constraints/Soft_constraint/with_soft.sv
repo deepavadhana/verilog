@@ -2,7 +2,7 @@
 class seq;
   rand bit [3:0] val;
   rand bit [4:0] a;
-  constraint cons { soft val inside{[10:20]};}
+  constraint cons { soft val inside{[10:20]};} //here soft is used so that no conflict occurs
 endclass
 module inline_constr();
   seq s=new();
