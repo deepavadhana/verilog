@@ -10,7 +10,7 @@ module inline_constr();
     repeat (8) begin
       s.randomize();
       $display("Value=%0d",s.val); 
-      s.randomize with {val inside{[1:6]};};
+      s.randomize with {val inside{[1:6]};}; //see here the range makes conflict with the above declared constraint so soft contraint is used
       $display("After inline constraint Value=%0d",s.val);
     end
   end
