@@ -11,8 +11,8 @@ module inline_constr();
     repeat (8) begin
       s.randomize();
       $display("Value=%0d ,a=%0d",s.val,s.a); 
-    s.randomize with {val inside{[1:6]};};
-    s.randomize with {a>0 ;a<10;};
+      s.randomize with {val inside{[15:17]};};//here the values of val and a are not conflicting the aabove constraints its lie inside the range of the above constraints
+      s.randomize with {a>11 ;a<16;};
       $display("After inline constraint Value=%0d ,a=%0d",s.val,s.a);
     end
   end
