@@ -33,4 +33,27 @@ module seq;
     else
       $error("Fail");
     endmodule
+
+    Clock1
+│
+├── seq_1 ends (d = 1)
+│
+├── Wait 4 clocks (##4)
+│
+Clock2
+Clock3
+Clock4
+Clock5
+│
+├── seq_2 starts
+│
+├── Wait 4 clocks (##4 inside seq_2)
+│
+Clock6
+Clock7
+Clock8
+Clock9
+│
+└── k = 1
+    seq_2 ends
     
