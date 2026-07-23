@@ -34,5 +34,24 @@ module seq;
       #100; $finish;
       end
     endmodule
+
+
+    Clock
+
+↑    ↑    ↑    ↑    ↑    ↑
+|    |    |    |    |    |
+x-------------------------->
+      wait 5 clocks
+                     |
+                     |
+                     V
+                     y
+
+If this happens,
+then at this same ending clock
+
+x && y
+
+must also be TRUE
     
   
