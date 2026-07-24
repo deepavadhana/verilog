@@ -1,3 +1,5 @@
+// Code your testbench here
+// or browse Examples
 module seq;
   bit clk,a;
   logic [3:0] b;
@@ -7,12 +9,12 @@ module seq;
     #5; a=1;b=4'b1000;
     #5; a=0;b=4'b1110;
     #5; a=1;b=4'b1011;
-    #5; a=0;b=4'b1011;
+    #5; a=0;b=4'b1001;
     #5; a=1;b=4'b0000;
-    #5; a=1;b=4'b0011;
+    #5; a=1;b=4'b0001;
     #5; a=0;b=4'b1100;
-    #5; a=1;b=4'b0101;
-    #5; a=0;b=4'b1101;
+    #5; a=1;b=4'b0100;
+    #5; a=0;b=4'b1000;
     #5; a=1;b=4'b1010;
     #5; a=1;b=4'b1001;
     #100; $finish;
