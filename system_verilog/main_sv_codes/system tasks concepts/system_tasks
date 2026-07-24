@@ -1,0 +1,114 @@
+| System task | Meaning               | Simulation effect                      |
+| ----------- | --------------------- | -------------------------------------- |
+| `$finish`   | Ends the simulation        | Stops simulation normally            |
+| `$stop`     | Pauses simulation          | Simulator enters interactive mode    |
+| `$exit`     | Exits from a program block | Terminates current program           |
+| `$fatal`    | Reports fatal error        | Stops simulation immediately         |
+| `$error`    | Reports an error           | Continues simulation but marks error |
+| `$warning`  | Reports warning            | Continues simulation                 |
+| `$info`     | Prints information message | Continues simulation                 |
+| System Task   | Meaning                                       | Usage                         |
+| ------------- | --------------------------------------------- | ----------------------------- |
+| `$display`    | Prints message once                           | Prints and adds newline       |
+| `$write`      | Prints message                                | No automatic newline          |
+| `$strobe`     | Prints at end of current simulation time step | Shows final updated values    |
+| `$monitor`    | Continuously monitors signals                 | Prints whenever value changes |
+| `$monitoron`  | Enables monitoring                            | Starts `$monitor`             |
+| `$monitoroff` | Disables monitoring                           | Stops `$monitor`              |
+
+| System Task | Meaning                        |
+| ----------- | ------------------------------ |
+| `$fopen`    | Opens a file                   |
+| `$fclose`   | Closes a file                  |
+| `$fdisplay` | Writes formatted data to file  |
+| `$fwrite`   | Writes without newline to file |
+| `$fstrobe`  | Writes at end of timestep      |
+| `$fmonitor` | Monitors signals into file     |
+| `$fflush`   | Flushes file buffer            |
+| `$fscanf`   | Reads formatted data from file |
+| `$fgets`    | Reads a line from file         |
+| `$fgetc`    | Reads a character              |
+
+| System Task  | Meaning               |
+| ------------ | --------------------- |
+| `$dumpfile`  | Creates waveform file |
+| `$dumpvars`  | Dumps signals         |
+| `$dumpon`    | Enable dumping        |
+| `$dumpoff`   | Disable dumping       |
+| `$dumpall`   | Dump all signals      |
+| `$dumpflush` | Flush dump data       |
+
+| System Task  | Meaning                            |
+| ------------ | ---------------------------------- |
+| `$readmemh`  | Reads hexadecimal data into memory |
+| `$readmemb`  | Reads binary data into memory      |
+| `$writememh` | Writes memory contents as hex      |
+| `$writememb` | Writes memory contents as binary   |
+
+| Function         | Meaning                          |
+| ---------------- | -------------------------------- |
+| `$urandom`       | Generates unsigned random number |
+| `$urandom_range` | Random number within range       |
+| `$random`        | Generates random integer         |
+
+| Task/Function | Meaning                      |
+| ------------- | ---------------------------- |
+| `$time`       | Current simulation time      |
+| `$stime`      | 32-bit simulation time       |
+| `$realtime`   | Real-valued simulation time  |
+| `$timeformat` | Controls time display format |
+
+| Function       | Meaning                 |
+| -------------- | ----------------------- |
+| `$past()`      | Previous clock value    |
+| `$rose()`      | Detect rising edge      |
+| `$fell()`      | Detect falling edge     |
+| `$stable()`    | No change               |
+| `$changed()`   | Value changed           |
+| `$onehot()`    | Exactly one bit high    |
+| `$onehot0()`   | Zero or one bit high    |
+| `$isunknown()` | Checks X/Z              |
+| `$countones()` | Counts number of 1 bits |
+| `$countbits()` | Counts selected bits    |
+
+| Function      | Meaning             |
+| ------------- | ------------------- |
+| `$itor`       | Integer to real     |
+| `$rtoi`       | Real to integer     |
+| `$itor`       | Integer → real      |
+| `$bitstoreal` | Bit vector → real   |
+| `$realtobits` | Real → bit vector   |
+| `$signed`     | Convert to signed   |
+| `$unsigned`   | Convert to unsigned |
+
+| Function | Meaning           |
+| -------- | ----------------- |
+| `$ln`    | Natural logarithm |
+| `$log10` | Log base 10       |
+| `$exp`   | Exponential       |
+| `$sqrt`  | Square root       |
+| `$pow`   | Power             |
+| `$floor` | Round down        |
+| `$ceil`  | Round up          |
+| `$abs`   | Absolute value    |
+
+| Function   | Meaning                |
+| ---------- | ---------------------- |
+| `$clog2()` | Ceiling log base 2     |
+| `$bits()`  | Returns number of bits |
+| `$size()`  | Array size             |
+| `$left()`  | Left index             |
+| `$right()` | Right index            |
+| `$high()`  | Highest index          |
+| `$low()`   | Lowest index           |
+
+Most Important for VLSI Verification Interviews
+| Category      | Important Tasks                                               |
+| ------------- | ------------------------------------------------------------- |
+| Printing      | `$display`, `$monitor`, `$strobe`                             |
+| Simulation    | `$finish`, `$stop`, `$fatal`                                  |
+| Memory        | `$readmemh`, `$readmemb`                                      |
+| Assertions    | `$past`, `$rose`, `$fell`, `$stable`, `$onehot`, `$isunknown` |
+| Randomization | `$urandom`, `$urandom_range`                                  |
+| Time          | `$time`, `$realtime`                                          |
+| Waveform      | `$dumpfile`, `$dumpvars`                                      |
