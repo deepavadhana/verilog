@@ -7,6 +7,7 @@ module set_of_trans;
     a: coverpoint a{
       bins b1=(1,2=>3,4);
       bins b2=(1,3=>4);
+      bins b3=(1=>2);//single value transition
       //use bracket for trans bins
     }
   endgroup
