@@ -1,3 +1,4 @@
+
 class A;
   int a;
   mailbox mb;
@@ -10,8 +11,10 @@ class A;
       mb.put(a);
       $display("Mailbox created ");
       $display("transmission of data =%0d",a);
-      $display("No of msgs :%0d ",mb.num());
+      
       end
+    $display("No of msgs :%0d ",mb.num());
+      
   endtask
 endclass
 class B;
@@ -22,19 +25,16 @@ class B;
   endfunction
   task trans();
     for(int i=0;i<10;i++)begin
-        a++;
       mb.peek(a);
       $display("Peeking of data =%0d",a);
-      $display("No of msgs :%0d ",mb.num());
+
       end
-  endtask
-task recieve();
     begin
       mb.get(a);
       $display("Recieving of data =%0d",a);
       $display("No of msgs :%0d ",mb.num());
       end
-     endtask
+      endtask
 endclass
   module peek_mtd;
     A a1;
@@ -45,8 +45,7 @@ endclass
       b1=new(m);
       repeat(10) begin
       a1.load();
-        b1.trans();
-        b1.recieve();
+      b1.trans();
       end
     end
   endmodule
